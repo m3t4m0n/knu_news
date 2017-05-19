@@ -14,6 +14,7 @@ class PosterController < ApplicationController
       @user_id.category=params[:category]
       @user_id.image=params[:image]
       @user_id.save
+      
       redirect_to '/poster/index'
     end
 

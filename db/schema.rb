@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20170519062449) do
     t.datetime "start_date"
     t.datetime "end_date"
     t.integer  "like",       default: 0,                 null: false
-    t.integer  "category"
+    t.integer  "category",   default: 0
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
   end
