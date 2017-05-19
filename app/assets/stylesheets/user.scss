@@ -1,3 +1,4 @@
+
 @import 'bourbon'; // http://bourbon.io/
 
 @import '../../partials/variables'; // colors, fonts etc...
@@ -6,7 +7,8 @@
 
 @import '../../partials/layout'; // responsive grid and media queries
 
-/* -------------------------------- 
+
+/* --------------------------------
 
 Primary style
 
@@ -39,9 +41,9 @@ a {
 	text-decoration: none;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-Main Components 
+Main Components
 
 -------------------------------- */
 
@@ -114,9 +116,9 @@ Main Components
 	}
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xtab-filter 
+xtab-filter
 
 -------------------------------- */
 
@@ -135,7 +137,7 @@ xtab-filter
 	margin: 0 auto;
 	z-index: 1;
 
-	&::after { 
+	&::after {
 		/* small arrow icon */
 		content:'';
 		position: absolute;
@@ -146,7 +148,7 @@ xtab-filter
 		width: 16px;
 		height: 16px;
 
-		background: image-url('cd-icon-arrow.svg') no-repeat center center;
+		background: url('../img/cd-icon-arrow.svg') no-repeat center center;
 
 		@include transition(all .3s);
 		pointer-events: none;
@@ -162,11 +164,11 @@ xtab-filter
 	}
 
 	li {
-		display: none; 
+		display: none;
 
 		&:first-child {
 			/* this way the placehodler is alway visible */
-			display: block; 
+			display: block;
 		}
 	}
 
@@ -188,7 +190,7 @@ xtab-filter
 
 		&::after {
 			/* small arrow rotation */
-			@include transform(translateY(-50%) rotate(-180deg));  
+			@include transform(translateY(-50%) rotate(-180deg));
 		}
 
 		ul {
@@ -201,7 +203,7 @@ xtab-filter
 
 		.placeholder a {
 			/* reduces the opacity of the placeholder on mobile when the menu is open */
-			opacity: .4; 
+			opacity: .4;
 		}
 	}
 
@@ -226,7 +228,7 @@ xtab-filter
 			display: inline-block;
 
 			&.placeholder {
-				display: none !important; 
+				display: none !important;
 			}
 		}
 
@@ -273,9 +275,9 @@ xtab-filter
 	}
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xgallery 
+xgallery
 
 -------------------------------- */
 
@@ -325,7 +327,7 @@ xgallery
 		float: right;
 		@include transition(width .3s);
 
-		li { 
+		li {
 			width: 23%;
 		}
 
@@ -336,9 +338,9 @@ xgallery
 	}
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xfilter 
+xfilter
 
 -------------------------------- */
 
@@ -374,7 +376,7 @@ xfilter
 
 	form {
 		padding: $tab-filter-height+20px 20px;
-	} 
+	}
 
 	.cd-close {
 		position: absolute;
@@ -430,7 +432,7 @@ xfilter
 	text-indent: 100%;
 	color: transparent;
 	white-space: nowrap;
-	background: transparent image-url('cd-icon-filter.svg') no-repeat center center;
+	background: transparent url('../img/cd-icon-filter.svg') no-repeat center center;
 
 	z-index: 3;
 
@@ -464,9 +466,9 @@ xfilter
 	}
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xcustom form elements 
+xcustom form elements
 
 -------------------------------- */
 
@@ -499,7 +501,7 @@ xcustom form elements
 			top: 50%;
 			width: 16px;
 			height: 16px;
-			background: image-url('cd-icon-arrow.svg') no-repeat center center;
+			background: url('../img/cd-icon-arrow.svg') no-repeat center center;
 
 			@include transform(translateY(-50%));
 			@include transition(transform .3s);
@@ -565,7 +567,7 @@ xcustom form elements
 		width: 16px;
 		height: 16px;
 
-		background: image-url('cd-icon-arrow.svg') no-repeat center center;
+		background: url('../img/cd-icon-arrow.svg') no-repeat center center;
 		pointer-events: none;
 	}
 
@@ -631,7 +633,7 @@ xcustom form elements
 		/* check mark style for check boxes */
 		width: 16px;
 		height: 16px;
-		background: image-url('cd-icon-check.svg') no-repeat center center;
+		background: url('../img/cd-icon-check.svg') no-repeat center center;
 	}
 
 	.radio-label::before,
@@ -663,9 +665,5 @@ xcustom form elements
 	/* hide custom arrow on Firefox - select element */
 	.cd-filter-block .cd-select::after {
 		display: none;
-	}
-
-	.flex_line{
-	    display:flex;
 	}
 }

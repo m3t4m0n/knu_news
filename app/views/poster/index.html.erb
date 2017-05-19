@@ -2,9 +2,11 @@
    <section class="page-section" id="about">
     <div class="container relative">
         
-        <h2 class="section-title font-alt align-left mb-70 mb-sm-40">
-            POSTERS ABOUT..
-        </h2>
+          <a href="/poster/create" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" style="float:right; top:-20;">load post</a>
+          <h2 class="section-title font-alt align-left mb-70 mb-sm-40">
+              POSTERS ABOUT..
+          </h2>
+        
         
         <div class="row">
             
@@ -13,7 +15,8 @@
             <div class="col-sm-4 mb-xs-30 wow fadeInUp">
                 <div class="team-item">
                     <div class="team-item-image">
-                        <%= image_tag("#{p.image}") %>
+                        
+                        <%= image_tag @original_filename %>
                         
                         <div class="team-item-detail">
                             <h4 class="font-alt normal"><%=p.host%></h4>
