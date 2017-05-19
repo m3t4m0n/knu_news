@@ -1,8 +1,55 @@
 <div class="home-section" style="top:80px; text-align:center;">
-    <p>this will be showing some poster of kangnam news</p>
-      <% @every_post.each do |p| %>
-      <%= p.intro %><br>
-      <%= p.place %><br>
-      <%= p.image %><br><hr>
-      <% end %>
+   <section class="page-section" id="about">
+    <div class="container relative">
+        
+        <h2 class="section-title font-alt align-left mb-70 mb-sm-40">
+            POSTERS ABOUT..
+        </h2>
+        
+        <div class="row">
+            
+            <!-- Team item -->
+            <% @every_post.each do |p|%>
+            <div class="col-sm-4 mb-xs-30 wow fadeInUp">
+                <div class="team-item">
+                    <div class="team-item-image">
+                        <%= image_tag("#{p.image}") %>
+                        
+                        <div class="team-item-detail">
+                            <h4 class="font-alt normal"><%=p.host%></h4>
+                            
+                            <p>
+                                <%= p.intro %> 
+                            </p>
+                            
+                            <div class="team-social-links">
+                                <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                                <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="team-item-descr font-alt">
+                        
+                        <div class="team-item-name">
+                            <%=p.host %>
+                        </div>
+                        
+                        <div class="team-item-role">
+                            <%= p.place %>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- End Team item -->
+            <% end%>
+            
+        </div>
+    </div>
+</section>
+<!-- End About Section -->
 </div>
