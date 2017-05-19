@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   get 'common/index'
   root 'common#index'
-
+  get 'poster/index'
+  get 'poster/upload'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

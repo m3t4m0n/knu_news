@@ -1,0 +1,13 @@
+<div class="container" style="height:50px;">
+    
+    <p>포스터를 작성해주세요</p>
+    <% form_tag( {action: :upload}, multipart: true) do %>
+    
+        title:<textarea name="intro" type="content" rows="1" placeholder="put title here"></textarea><br>
+        location:<textarea name="place" type="content" class="form-control" rows="1" placeholder="put location here"></textarea><br>
+    
+        <%= file_field_tag 'image' %><br>
+        <%= submit_tag %>
+        
+    <% end %>
+</div>
