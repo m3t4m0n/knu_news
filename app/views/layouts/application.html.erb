@@ -3,7 +3,7 @@
 <head>
   <title>KNUNEWS</title>
 
-  <%= stylesheet_link_tag    'application', media: 'all'%>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
     
@@ -17,6 +17,10 @@
     </div>
     
     <%= render "partials/nav" %>
+    <% if current_user%>
+      <!--로그인 중이다. 탭 떠야함 -->
+      <%= render "partials/tab" %>
+    <% end %>
       <%= yield %>
     <%= render "partials/footer" %>
   </div>
