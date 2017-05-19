@@ -6,7 +6,6 @@
 
 @import '../../partials/layout'; // responsive grid and media queries
 
-
 /* -------------------------------- 
 
 Primary style
@@ -75,8 +74,8 @@ Main Components
 
 	&.is-fixed {
 		.cd-tab-filter-wrapper {
-			position: absolute;
-			top: 75px;
+			position: fixed;
+			top: 0;
 			left: 0;
 			width: 100%;
 		}
@@ -147,7 +146,7 @@ xtab-filter
 		width: 16px;
 		height: 16px;
 
-		background: url('../img/cd-icon-arrow.svg') no-repeat center center;
+		background: image-url('cd-icon-arrow.svg') no-repeat center center;
 
 		@include transition(all .3s);
 		pointer-events: none;
@@ -500,7 +499,7 @@ xcustom form elements
 			top: 50%;
 			width: 16px;
 			height: 16px;
-			background: url('cd-icon-arrow.svg') no-repeat center center;
+			background: image-url('cd-icon-arrow.svg') no-repeat center center;
 
 			@include transform(translateY(-50%));
 			@include transition(transform .3s);
@@ -566,7 +565,7 @@ xcustom form elements
 		width: 16px;
 		height: 16px;
 
-		background: url('../img/cd-icon-arrow.svg') no-repeat center center;
+		background: image-url('cd-icon-arrow.svg') no-repeat center center;
 		pointer-events: none;
 	}
 
@@ -632,7 +631,7 @@ xcustom form elements
 		/* check mark style for check boxes */
 		width: 16px;
 		height: 16px;
-		background: url('../img/cd-icon-check.svg') no-repeat center center;
+		background: image-url('cd-icon-check.svg') no-repeat center center;
 	}
 
 	.radio-label::before,

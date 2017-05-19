@@ -1,4 +1,4 @@
-
+/* global jQuery */
 // Revolution Slider Init 
 
 (function($){
