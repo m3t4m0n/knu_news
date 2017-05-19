@@ -21,32 +21,16 @@ Poster.create(
         end_date: "2017/05/27",
         category: 0
       )
-
-      t.integer :user_id
-     
-      t.string :host  #주최하는곳 
-      t.string :place #개최 장소 
-      
-      t.text :intro   #상세소개
-      t.string :image #이미지 
-      
-      t.datetime :start_date #시작일자
-      t.datetime :end_date #끝일자 
-      
-      t.integer :like #좋아요 
-      t.integer :category #분류
-      t.timestamps null: false
-      #grade
-      # 멋쟁이 사자처럼 0 
-      # 동아리 1
-      # 학과 행사 2
-      # 교내 행사 3
-      # 장학금 4
-      # 외부 행사 5
-      # 기타 6
-      #회원가입 시 email로 받는다. 
-
-=end
+Poster.create(
+        user_id: 1,
+        host: "한국 IT 경영학회",
+        place: "Naver D.camp",
+        intro: "안녕하세요. 안녕하세요.한국대학생 IT경영학회에서 강연회를 진행합니다.",
+        image: "poster/poster-2.png",
+        start_date: "2017/05/20",
+        end_date: "2017/05/20",
+        category: 5
+      )
 
 Poster.create(
         user_id: 1,
@@ -73,3 +57,30 @@ Poster.create(
         end_date: "2017/05/25",
         category: 3
       )
+      
+      
+      t.integer :user_id
+     
+      t.string :host  #주최하는곳 
+      t.string :place #개최 장소 
+      
+      t.text :intro   #상세소개
+      t.string :image #이미지 
+      
+      t.datetime :start_date #시작일자
+      t.datetime :end_date #끝일자 
+      
+      t.integer :like #좋아요 
+      t.integer :category #분류
+      t.timestamps null: false
+      #grade
+      # 멋쟁이 사자처럼 0 
+      # 동아리 1
+      # 학과 행사 2
+      # 교내 행사 3
+      # 장학금 4
+      # 외부 행사 5
+      # 기타 6
+      #회원가입 시 email로 받는다. 
+
+=end
