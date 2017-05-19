@@ -5,8 +5,8 @@
         <div class="full-wrapper relative clearfix ">
             <!-- Logo ( * your text or image into link tag *) -->
             <div class="nav-logo-wrap local-scroll">
-                <a href="#top" class="logo small-height">
-                    <%= image_tag("logo-dark.png") %>
+                <a href="/common/index" class="logo small-height">
+                    <%= image_tag("logo.png") %>
                 </a>
             </div>
             <div class="mobile-nav small-height" style="height: 75px; line-height: 75px; width: 75px;">
@@ -15,6 +15,14 @@
             <!-- Main Menu -->
             <div class="inner-nav desktop-nav">
                 <ul class="clearlist scroll-nav local-scroll">
+<<<<<<< HEAD
+                    <li class="active"><a href="/common/index" style="height: 75px; line-height: 75px;" class="">Home</a></li>
+                    <li><a href="/poster/index" style="height: 75px; line-height: 75px;" class="">poster</a></li>
+                    <li><a href="#best" style="height: 75px; line-height: 75px;" class="">best_poster</a></li>
+                    
+                    <li><a href="#mypage" style="height: 75px; line-height: 75px;" class="">mymenu</a></li>
+                    
+=======
                     <li class="active"><a href="/" style="height: 75px; line-height: 75px;" class="">Home</a></li>
      
                     <% if current_user%>
@@ -26,6 +34,7 @@
                         <!--로그아웃 중이다. 로그인 창 떠야함 -->
                         <li><a href="/users/sign_in" style="height: 75px; line-height: 75px;" class="">login</a></li>
                     <% end %>
+>>>>>>> 8d6906e4f369faf829874acaa1de367a1c12270e
                 </ul>
             </div>
         </div>

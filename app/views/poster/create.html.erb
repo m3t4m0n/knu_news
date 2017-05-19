@@ -1,26 +1,29 @@
-<%= form_tag({action: :upload}, multipart: true) do %>
-<div class="home-section" style="top:80px; text-align:center; height:700px;vertical-align: middle;">
-    
+<%= form_for :upload, :url => {:action=>:upload}, :html=>{:multipart=>true} do %>
+<div class="home-section" style="text-align:center; height:700px;vertical-align: middle;">
+    <hr><br><br><br>
     <h4>포스터를 작성해주세요</h4><br>
-      
-      <%= text_field_tag 'intro', nil ,placeholder: 'Enter intro', size:80 %><br><br>
+      <label for="intro">정보를 입력해주세요</label><br>
+      <%= text_field_tag 'intro', nil ,placeholder: 'Enter intro', size:80, row:"5" %><br><br>
       <%= text_field_tag 'host', nil ,placeholder: 'Enter host',size:80 %><br><br>
       <%= text_field_tag 'place', nil ,placeholder: 'Enter place',size:80 %><br><br>
       
-      <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          category
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </div>
-      
-      <%= file_field_tag 'image' %><br>
-      <%= submit_tag %>
+        <div class="row">
+            <div class="col-sm-4 mb-40">
+            </div>
+            <div class="col-sm-4 mb-40">
+            <form method="post" action="#" id="form-1" role="form" class="form">
+                                    
+                 <div class="mb-20 mb-md-10">
+                    <select class="input-md form-control">
+                        <option name="category">1</option>
+                        <option name="category">Two</option>
+                        <option name="category">Three</option>
+                    </select>
+            </div></form></div></div><br>
+                                
+                                
+     <div style="margin-left:680px;">
+      <%= file_field_tag 'image'%><br></div>
+      <%= submit_tag 'UPLOAD' %>
     <% end %>
 </div>
