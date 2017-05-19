@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   get 'common/index'
   root 'common#index'
   get 'poster/index'
+  post '/upload'=>'poster#index'
   get 'poster/upload'
-  post 'poster/index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

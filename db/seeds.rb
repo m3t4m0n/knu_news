@@ -47,6 +47,31 @@ Poster.create(
       #회원가입 시 email로 받는다. 
 
 =end
+User.create(
+        email: "example@gmail.com",
+        password: "12345678"
+    )
+
+Poster.(
+        user_id: 1,
+        host: "멋쟁이 사자처럼",
+        place: "광교 문화 센터 허브 홀",
+        intro: "안녕하세요. 멋쟁이사자처럼 경기 하프톤 입니다.",
+        image: "poster/poster-1.png",
+        start_date: "2017/05/27",
+        end_date: "2017/05/27",
+        category: 0
+      )
+Poster.create(
+        user_id: 1,
+        host: "한국 IT 경영학회",
+        place: "Naver D.camp",
+        intro: "안녕하세요. 안녕하세요.한국대학생 IT경영학회에서 강연회를 진행합니다.",
+        image: "poster/poster-2.png",
+        start_date: "2017/05/20",
+        end_date: "2017/05/20",
+        category: 5
+      )
 
 Poster.create(
         user_id: 1,
