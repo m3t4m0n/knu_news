@@ -25,7 +25,7 @@ $(document).ready(function(){
 
     $.fn.downCount = function (options, callback) {
         var settings = $.extend({
-                date: null,
+                date: '05/19/2017 23:04:00',
                 offset: null
             }, options);
 

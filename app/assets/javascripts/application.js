@@ -10,11 +10,14 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//= require jquery2
 //= require jquery_ujs
+//= require main
+//= require modernizr
 //= require all
 //= require bootstrap.min
 //= require contact-form
 //= require contact-reservations-form
 //= require imagesloaded.pkgd.min
 //= require_tree .
+
