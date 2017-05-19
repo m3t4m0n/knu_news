@@ -1,0 +1,8 @@
+<div class="container" style="height:150px;">
+    <p>this will be showing some poster of kangnam news</p>
+      <% @every_post.each do |p| %>
+      <%= p.intro %><br>
+      <%= p.place %><br>
+      <%= p.image %><br><hr>
+      <% end %>
+</div>
