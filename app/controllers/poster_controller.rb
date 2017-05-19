@@ -3,9 +3,9 @@ class PosterController < ApplicationController
     def index
       @every_post=Poster.all.order("id desc")
     end
-   
+   def create
+   end
     def upload
-    
       @user_id=Poster.new
       @user_id.intro=params[:intro]
       @user_id.host=params[:host]
@@ -16,5 +16,6 @@ class PosterController < ApplicationController
       @user_id.save
       redirect_to '/poster/index'
     end
-
+    
+    
 end

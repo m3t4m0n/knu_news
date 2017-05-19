@@ -1,0 +1,26 @@
+<%= form_tag({action: :upload}, multipart: true) do %>
+<div class="home-section" style="top:80px; text-align:center; height:700px;vertical-align: middle;">
+    
+    <h4>포스터를 작성해주세요</h4><br>
+      
+      <%= text_field_tag 'intro', nil ,placeholder: 'Enter intro', size:80 %><br><br>
+      <%= text_field_tag 'host', nil ,placeholder: 'Enter host',size:80 %><br><br>
+      <%= text_field_tag 'place', nil ,placeholder: 'Enter place',size:80 %><br><br>
+      
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          category
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
+      
+      <%= file_field_tag 'image' %><br>
+      <%= submit_tag %>
+    <% end %>
+</div>
