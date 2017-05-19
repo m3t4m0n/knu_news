@@ -2,6 +2,10 @@
 <html>
 <head>
   <title>KNUNEWS</title>
+  
+  <script src="dist/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+
 
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
@@ -18,10 +22,9 @@
     
     <%= render "partials/nav" %>
       <%= yield %>
+    <%= render "partials/myNav" %>
     <%= render "partials/footer" %>
   </div>
-  
-
 
 </body>
 </html>
