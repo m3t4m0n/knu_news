@@ -1,0 +1,8 @@
+<div class="home-section" style="top:80px; text-align:center;">
+    <p>this will be showing some poster of kangnam news</p>
+      <% @every_post.each do |p| %>
+      <%= p.intro %><br>
+      <%= p.place %><br>
+      <%= p.image %><br><hr>
+      <% end %>
+</div>

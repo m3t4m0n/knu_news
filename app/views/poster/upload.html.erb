@@ -1,0 +1,13 @@
+
+<%= form_tag({action: :upload}, multipart: true) do %>
+<div class="home-section" style="top:80px; text-align:center; height:400px; vertical-align: middle;">
+    
+    <p>포스터를 작성해주세요</p>
+    
+      <%= text_field_tag 'intro' %><br>
+      <%= text_field_tag 'host' %><br>
+      <%= text_field_tag 'place' %><br>
+      <%= file_field_tag 'image' %><br>
+      <%= submit_tag %>
+    <% end %>
+</div>
