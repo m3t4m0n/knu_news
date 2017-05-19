@@ -15,4 +15,12 @@
  *= require font-awesome
  *= require_tree .
  */
+ .nav_st{
+     clear: both;
+ }
  
+
+.knu-logo{
+ width : 120px;
+ height: 120px;
+}

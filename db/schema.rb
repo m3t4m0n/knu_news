@@ -21,17 +21,17 @@ ActiveRecord::Schema.define(version: 20170519062449) do
   end
 
   create_table "posters", force: :cascade do |t|
-    t.integer  "user_id"
-    t.string   "host"
-    t.string   "place"
-    t.text     "intro"
-    t.string   "image"
+    t.integer  "user_id",                                null: false
+    t.string   "host",       default: "-",               null: false
+    t.string   "place",      default: "-",               null: false
+    t.text     "intro",      default: "-",               null: false
+    t.string   "image",      default: "footer_logo.png", null: false
     t.datetime "start_date"
     t.datetime "end_date"
-    t.integer  "like"
+    t.integer  "like",       default: 0,                 null: false
     t.integer  "category"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
   end
 
   create_table "replies", force: :cascade do |t|
