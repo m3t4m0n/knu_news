@@ -1,7 +1,7 @@
 class CreatePosters < ActiveRecord::Migration
   def change
     create_table :posters do |t|
-      
+      t.integer :user_id
      
       t.string :host  #주최하는곳 
       t.string :place #개최 장소 
