@@ -14,18 +14,14 @@
                 <%= f.password_field :password, autocomplete:"off",class:"input-md form-control",placeholder:"password" %>
               </div>
               <% if devise_mapping.rememberable? -%>
-              <div class="mb-20 mb-md-10 flex_line">
-                  <%= f.label :remember_me, class:"checkbox-inline"%>
-                  <%= f.check_box :remember_me %>
-              </div>
               <div class="mb-20 mb-md-10">
                  <label class="checkbox-inline">
                       <%= render "devise/shared/links" %>
                   </label>
               </div>
               <% end -%>
-              <div class="actions checkbox-inline">
-                <%= f.submit "Login" %>
+              <div class="actions ">
+                <%= f.submit "Login",class: "btn btn-mod btn-border btn-small btn-round"%>
               </div>
             <% end %>
           </div>
