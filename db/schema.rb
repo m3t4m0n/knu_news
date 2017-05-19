@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170519180810) do
+=======
+ActiveRecord::Schema.define(version: 20170519172537) do
+>>>>>>> 8d6906e4f369faf829874acaa1de367a1c12270e
 
   create_table "like_posts", force: :cascade do |t|
     t.integer  "user_id"

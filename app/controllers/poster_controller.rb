@@ -21,6 +21,7 @@ class PosterController < ApplicationController
      # render :text => "created #{@data.id}"
       
       @user_id.save
+      
       redirect_to '/poster/index'
     end
     

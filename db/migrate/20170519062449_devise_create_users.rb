@@ -20,6 +20,12 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string   :last_sign_in_ip
       
       t.integer :grade
+      
+      #facebook
+      t.string :name     #name : 페이스북 사용자명을 저장할 속성
+      t.string :provider #provider : 인증서비스 제공업체명을 저장할 속성 (예, facebook, twitter 등)
+      t.string :uid      #uid : 사용자 아이디를 저장할 속성
+      t.string :image    #image : 페이스북  의 프로필 이미지 주소를 저장할 속성
 
       ## Confirmable
       # t.string   :confirmation_token
