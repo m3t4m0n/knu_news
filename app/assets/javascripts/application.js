@@ -11,7 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery2
 //= require jquery_ujs
+//= require main
+//= require modernizr
 //= require all
 //= require bootstrap.min
 //= require contact-form
