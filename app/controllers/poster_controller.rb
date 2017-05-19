@@ -6,8 +6,11 @@ class PosterController < ApplicationController
     def upload
       @new_post=Poster.new
       @new_post.intro=params[:intro]
+      @new_post.host=params[:host]
+      @new_post.place=params[:place]
       @new_post.image=params[:image]
       @new_post.save
+      redirect_to "poster/index"
     end
 
 end
