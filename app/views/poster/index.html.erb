@@ -1,7 +1,8 @@
 <div class="home-section" style="text-align:center;">
    <section class="page-section" id="about">
     <div class="container relative">
-          <div class="mb-10">
+              <div class="mb-10">
+          
           <a href="/poster/create" class="btn btn-mod btn-mod btn-large btn-round" style="float:right; top:-20;">load post</a>
           <h2 class="section-title font-alt align-left mb-70 mb-sm-40">
               POSTERS ABOUT..
@@ -11,17 +12,11 @@
         <div class="row">
             
             <!-- Team item -->
-            <% @every_post.each do |p|%>
+             <% @every_post.each do |p|%>
             <div class="col-sm-4 mb-xs-30 wow fadeInUp">
                 <div class="team-item">
                     <div class="team-item-image">
-                        
-<<<<<<< HEAD
-                        <%= image_tag ("#{p.image}") %>
-=======
                         <%= image_tag("#{p.image}") %>
->>>>>>> 8d6906e4f369faf829874acaa1de367a1c12270e
-                        
                         <div class="team-item-detail">
                             <h4 class="font-alt normal"><%=p.host%></h4>
                             
