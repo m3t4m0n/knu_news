@@ -912,7 +912,7 @@ a.btn-mod:focus{
 .form input[type="password"].input-md,
 .form input[type="date"].input-md,
 .form input[type="color"].input-md,
-.form select.input-md{
+.form select.input-md form-devise{
     height: 37px;
     padding-left: 13px;
     padding-right: 13px;

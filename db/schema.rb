@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20170519180810) do
-=======
-ActiveRecord::Schema.define(version: 20170519172537) do
->>>>>>> 8d6906e4f369faf829874acaa1de367a1c12270e
+ActiveRecord::Schema.define(version: 20170519062449) do
 
   create_table "like_posts", force: :cascade do |t|
     t.integer  "user_id"
@@ -34,6 +30,7 @@ ActiveRecord::Schema.define(version: 20170519172537) do
     t.datetime "end_date"
     t.integer  "like",       default: 0,                 null: false
     t.integer  "category",   default: 0
+    t.binary   "data",       default: "x'30'"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
   end
@@ -58,12 +55,12 @@ ActiveRecord::Schema.define(version: 20170519172537) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.integer  "grade"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
     t.string   "name"
     t.string   "provider"
     t.string   "uid"
     t.string   "image"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

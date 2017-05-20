@@ -2,6 +2,10 @@
 <html>
 <head>
   <title>KNUNEWS</title>
+  
+  <script src="dist/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+
 
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
@@ -17,15 +21,9 @@
     </div>
     
     <%= render "partials/nav" %>
-    <% if current_user%>
-      <!--로그인 중이다. 탭 떠야함 -->
-      <%= render "partials/tab" %>
-    <% end %>
       <%= yield %>
     <%= render "partials/footer" %>
   </div>
-  
-
 
 </body>
 </html>
