@@ -16,6 +16,8 @@ class PosterController < ApplicationController
       @user_id.user_id=1
       @user_id.category=params[:category]
       @user_id.image= params[:image].original_filename
+      File.open(Rails.root.join('app', 'models', 'poster'), 'wb') do |file|
+      file.write(@user_id.data)
       File.open(Rails.root.join('app','models','poster', @user_id), 'wb') do |file|
       File.write(@user_id.data)
       
@@ -120,3 +122,4 @@ end
 # 교외 행사 5
 # 기타 6
 #회원가입 시 email로 받는다. 
+end

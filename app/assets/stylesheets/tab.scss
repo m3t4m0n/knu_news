@@ -37,12 +37,16 @@ body {
 		family: $primary-font; // variables inside partials > _variables.scss
 	}
 	color: $color-1;
-	background-color: #ffffff;
+	background-color: #ffffff
 }
 
 a {
 	color: $color-2;
 	text-decoration: none;
+}
+
+ol, ul {
+	list-style: none;
 }
 
 /* --------------------------------

@@ -12,6 +12,8 @@
 //
 //= require jquery2
 //= require jquery_ujs
+//= require tab_main
+//= require myNav_main
 //= require modernizr
 //= require all
 //= require bootstrap.min

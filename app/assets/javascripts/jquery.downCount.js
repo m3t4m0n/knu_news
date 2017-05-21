@@ -10,7 +10,7 @@ $(document).ready(function(){
         date: data_finish_date,
         offset: data_UTC
     }, function(){
-       // alert(data_finish_message);
+    // alert(data_finish_message);
     });
     
 });

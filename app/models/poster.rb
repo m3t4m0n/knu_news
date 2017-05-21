@@ -3,5 +3,6 @@ class Poster < ActiveRecord::Base
     has_many :replies
     
     has_many :users, through: :like_posts
+    has_many :replies
     has_many :like_posts
 end

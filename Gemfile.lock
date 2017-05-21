@@ -50,6 +50,10 @@ GEM
       thor (~> 0.19)
     builder (3.2.3)
     byebug (9.0.6)
+    carrierwave (1.1.0)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     codemirror-rails (5.16.0)
       railties (>= 3.0, < 6.0)
     coffee-rails (4.1.1)
@@ -237,6 +241,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.6)
   bourbon
   byebug
+  carrierwave (~> 1.0)
   coffee-rails (~> 4.1.0)
   devise
   font-awesome-rails

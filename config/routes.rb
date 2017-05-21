@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'common/index'
   root 'common#index'
   get 'poster/index'
   post 'poster/upload'

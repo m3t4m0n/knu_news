@@ -1,3 +1,10 @@
+<% if current_user%>
+    <!--로그인 중이다. 탭 떠야함 -->
+    <%= render "partials/tab" %>
+<% end %>
+<div class="home-section" style="top:80px; text-align:center;">
+<div class="home-section" style=" text-align:center;">
+<div class="home-section" style="text-align:center;">
 <div class="home-section" style=" text-align:center;">
    <section class="page-section" id="about">
     <div class="container relative">
@@ -8,7 +15,7 @@
               POSTERS ABOUT..
           </h2>
         </div>
-        
+
         <div class="row">
             
             <!-- Team item -->
