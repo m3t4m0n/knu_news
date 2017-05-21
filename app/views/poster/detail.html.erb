@@ -89,7 +89,7 @@
                                 <div class="media-body">
                                     <div class="comment-item-data">
                                         <div class="comment-author">
-                                            <a href="#"><%= c.user_email %></a>
+                                            <a href="#"><%= User.find(c.user_id).email %></a>
                                         </div>
                                         <%=c.updated_at.to_s[0..10]%>
                                     </div>
@@ -99,13 +99,15 @@
                                 </div>
                             </li>
                             <% end %>
-                            <!-- End Comment Item -->
+                            <div id="reply_area">
+                                
                             
+                            </div>
+                            <!-- End Comment Item -->
                         </ul>
                     </div>
                     <!-- Add Review -->
                 <div>
-                    
                     <h4 class="blog-page-title font-alt">Add Review</h4>
                      <div class="row mb-20 mb-md-10">
                             <div class="col-md-6 mb-md-10">
@@ -113,16 +115,16 @@
                                <%=current_user.email%>
                             </div>
                     </div>
-                    
                     <!-- Form -->
                     <!-- Comment -->
                     <div class="mb-30 mb-md-10">
-                        <textarea name="text" id="text" class="input-md form-control" rows="3" placeholder="Comment" maxlength="400"></textarea>
+                        <textarea name="text" id="reply_content" class="input-md form-control" rows="3" placeholder="Comment" maxlength="400"></textarea>
                     </div>
                     <!-- Send Button -->
-                    <button type="submit" id ="reply_submit" class="btn btn-mod btn-medium btn-round">
-                            Send Review
+                    <button type="submit" id ="reply_create" value="<%=current_user.id%>" class="btn btn-mod btn-medium btn-round">
+                            댓글 등록
                     </button>
+                    <input type="hidden" id="user_email" value="<%=current_user.email%>">
                     <!-- End Form -->
                 </div>
                    <!-- End Add Review -->
@@ -132,8 +134,6 @@
     </div>
 </section>
 <!-- End Section -->
-
-
 <!-- Divider -->
 <hr class="mt-0 mb-0 "/>
 <!-- End Divider -->

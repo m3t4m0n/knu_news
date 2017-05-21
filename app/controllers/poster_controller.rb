@@ -95,6 +95,22 @@ class PosterController < ApplicationController
          end
          return like_user
     end
+    
+    def reply
+        
+        @reply = Reply.new
+        @reply.user_id = params[:user_id]
+        @reply.content = params[:content]
+        @reply.poster_id = params[:post_id]
+        if @reply.save
+            if request.xhr?
+            render :json => {
+                                :user_email => User.find(params[:user_id]).email
+                                
+                            }
+            end
+        end
+    end
 end
 # 멋쟁이 사자처럼 0 
 # 동아리 1

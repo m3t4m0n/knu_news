@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'poster/:id/detail' => 'poster#detail'
   get 'poster/like'
   post 'poster/like'
+  post 'poster/reply'
   get 'common/soomin_test'
   
   # The priority is based upon order of creation: first created -> highest priority.

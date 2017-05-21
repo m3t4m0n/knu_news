@@ -103,6 +103,40 @@ $(document).ready(function(){
       complete : function() {}
       });
     });
+    
+     $( "#reply_create" ).click(function() {
+        
+      var content = $("#reply_content").val();
+      var user_id = $(this).val();
+      var post_id = $("#post_like").val();
+      var user_email = $("#user_email")
+      
+      $.ajax({
+      method: "post",
+      url: "/poster/reply",
+      data: { content: content,
+              user_id: user_id,
+              post_id: post_id },
+      error : function(error) {alert("Error!"+error.error.message);},
+      success : function(data,textStatus, xhr) {
+     
+     
+         $("#reply_area").append('<li class="media comment-item">');
+            $("#reply_area").append('<div class="media-body">');
+                $("#reply_area").append('<div class="comment-item-data">');
+                    $("#reply_area").append('<div class="comment-author">');
+                        $("#reply_area").append('<a href="#">'+data.user_email+'</a>').trigger("create");
+                    $("#reply_area").append('</div>');
+                    $("#reply_area").append('now');   
+                $("#reply_area").append('</div>');
+                $("#reply_area").append('<p>'+content+'</p>').trigger("create");
+            $("#reply_area").append('</div>');
+         $("#reply_area").append('</li>');
+             
+      },
+      complete : function() {}
+      });
+    });
 
 
 });
