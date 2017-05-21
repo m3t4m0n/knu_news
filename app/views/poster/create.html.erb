@@ -1,13 +1,13 @@
 <%= form_tag({action: :upload}, multipart: true) do %>
 
-<div class="home-section" style="text-align:center; height:1200px;vertical-align: middle;">
+<div class="home-section" style="text-align:center; height:1400px;vertical-align: middle;">
     <hr><br><br><br>
-    <h4>포스터를 작성해주세요</h4><br>
+    <h2>포스터를 작성해주세요</h2><br>
       <label for="intro">정보를 입력해주세요</label><br>
       
             <br><br><div style="width:430px; text-align:center; margin-left:550px">
       <input type="title" name="title" id="title" class="input-md form-control" placeholder="title" maxlength="1000"><br><br>
-      <input type="content" name="intro" id="intro" class="input-md form-control" placeholder="intro" maxlength="1000"><br><br>
+      
       <input type="content" name="host" id="host" class="input-md form-control" placeholder="host" maxlength="100"><br><br>
       <input type="content" name="place" id="place" class="input-md form-control" placeholder="place" maxlength="100"><br><br>
       
@@ -15,8 +15,12 @@
 
       <input type="datetime" name="start_date" id="start_date" class="input-md form-control" placeholder="Enter start date ex)20170516" maxlength="100"><br><br>
       <input type="datetime" name="end_date" id="end_date" class="input-md form-control" placeholder="Enter end date ex)20170516" maxlength="100"><br><br>
-      </div>
       
+      
+      <textarea name="intro"  rows="10" , cols="50", placeholder="Enter intro "></textarea><br>
+      <br>
+      
+      </div>
       <label for="intro">주최자를 선택해주세요 </label><br>
         <div class="row">
             <div class="col-sm-4 mb-40">
