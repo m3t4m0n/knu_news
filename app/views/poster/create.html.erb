@@ -3,9 +3,11 @@
     <hr><br><br><br>
     <h4>포스터를 작성해주세요</h4><br>
       <label for="intro">정보를 입력해주세요</label><br>
+
       <%= text_field_tag 'intro', nil ,placeholder: 'Enter intro', size:80, row:"5" %><br><br>
       <%= text_field_tag 'host', nil ,placeholder: 'Enter host',size:80 %><br><br>
       <%= text_field_tag 'place', nil ,placeholder: 'Enter place',size:80 %><br><br>
+      <%= text_field_tag 'title', nil ,placeholder: 'Enter title', size:80, row:"5" %><br><br>
       <label for="intro">주최자를 선택해주세요 </label><br>
         <div class="row">
             <div class="col-sm-4 mb-40">
@@ -19,7 +21,11 @@
                         <option name="category">교외</option>
                         <option name="category">동아리</option>
                     </select>
-            </div></form></div></div><br>
+                </div>
+            </form>
+            </div>
+            </div>
+            <br>
                                 
      <label for="intro">포스터를 업로드해주세요</label><br><br><br>                           
      <div style="margin-left:650px;">
@@ -27,3 +33,4 @@
       <%= submit_tag %>
     <% end %>
 </div>
+
