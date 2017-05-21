@@ -16,7 +16,8 @@ class CreatePosters < ActiveRecord::Migration
       t.integer :like, default: 0, null: false #좋아요 
       t.integer :category ,default: "-"#분류
       
-      t.binary :data, default: 0
+     
+
       
      
       t.timestamps null: false

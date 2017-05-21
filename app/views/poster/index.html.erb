@@ -24,7 +24,13 @@
             <div class="col-sm-4 mb-xs-30 wow fadeInUp">
                 <div class="team-item">
                     <div class="team-item-image">
-                        <%= image_tag("#{p.image}") %>
+
+                        
+                        
+                       
+                        <img src="<%= p.image.url %>" /> 
+                        
+
                         <div class="team-item-detail">
                             <h4 class="font-alt normal"><%=p.host%></h4>
                         </div>

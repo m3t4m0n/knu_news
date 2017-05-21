@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'carrierwave'
+gem'fog-aws'
+
+
 gem 'nokogiri'
 gem 'rest-client'
 
