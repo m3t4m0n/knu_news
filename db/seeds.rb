@@ -85,12 +85,10 @@ Poster.create(
       # 기타 6
       #회원가입 시 email로 받는다. 
 
-<<<<<<< HEAD
 =end
 
 =begin
-=======
->>>>>>> 64271c170643f9e3a3894ce1152e9eef3a052067
+
 User.create(
         email: "example@gmail.com",
         password: "12345678"
@@ -142,7 +140,6 @@ Poster.create(
         end_date: "2017/05/25",
         category: 3
       )
-<<<<<<< HEAD
 =end
 
 User.create(
@@ -167,7 +164,7 @@ Poster.create(
         host: "한국 IT 경영학회",
         place: "Naver D.camp",
         intro: "안녕하세요. 안녕하세요.한국대학생 IT경영학회에서 강연회를 진행합니다.",
-        image: "poster/poster-2.png",
+        data: "poster/poster-2.png",
         start_date: "2017/05/20",
         end_date: "2017/05/20",
         category: 5
@@ -198,6 +195,4 @@ Poster.create(
         end_date: "2017/05/25",
         category: 3
       )
-=======
-=end
->>>>>>> 64271c170643f9e3a3894ce1152e9eef3a052067
+

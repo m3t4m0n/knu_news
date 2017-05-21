@@ -18,10 +18,16 @@ class PosterController < ApplicationController
       @user_id.image= params[:image].original_filename
       File.open(Rails.root.join('app', 'models', 'poster'), 'wb') do |file|
       file.write(@user_id.data)
+      File.open(Rails.root.join('app','models','poster', @user_id), 'wb') do |file|
+      File.write(@user_id.data)
       
       @user_id.save
       
       redirect_to '/poster/index'
       end
     end
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> 691cf069cbb2c96ca55235aa81305e90c3b68ee2
