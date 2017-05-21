@@ -20,7 +20,6 @@ class PosterController < ApplicationController
       @user_id.end_date=params[:end_date]
       @user_id.image= params[:image]
      
-
       
       @user_id.save
       
@@ -123,4 +122,3 @@ end
 # 교외 행사 5
 # 기타 6
 #회원가입 시 email로 받는다. 
-
