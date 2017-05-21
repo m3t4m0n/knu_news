@@ -26,8 +26,5 @@ class PosterController < ApplicationController
       redirect_to '/poster/index'
       end
     end
-<<<<<<< HEAD
 end
-=======
 end
->>>>>>> 691cf069cbb2c96ca55235aa81305e90c3b68ee2

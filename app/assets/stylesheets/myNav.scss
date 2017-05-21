@@ -12,6 +12,7 @@ Primary style
 
 -------------------------------- */
 
+/*
 *, *::after, *::before {
 	box-sizing: border-box;
 }
@@ -37,6 +38,7 @@ a {
 img {
 	max-width: 100%;
 }
+*/
 
 /* -------------------------------- 
 
@@ -50,7 +52,7 @@ Stretchy Nav style - common to:
 .cd-stretchy-nav {
 	position: fixed;
 	z-index: 2;
-	top: 40px;
+	bottom: 40px;
 	right: 5%;
 	pointer-events: none;
 
@@ -58,12 +60,12 @@ Stretchy Nav style - common to:
 		/* this is the stretching navigation background */
 		position: absolute;
 		z-index: 1;
-		top: 0;
+		bottom: 0;
 		right: 0;
 		width: 60px;
 		height: 60px;
 		border-radius: 30px;
-		background: $color-2;
+		background: #0071BE;
 		box-shadow: 0 1px 4px rgba(#000, .2);
 		@include transition(height .2s, box-shadow .2s);
 	}
@@ -81,7 +83,7 @@ Stretchy Nav style - common to:
 .cd-nav-trigger {
 	position: absolute;
 	z-index: 3;
-	top: 0;
+	bottom: 0;
 	right: 0;
 	height: 60px;
 	width: 60px;
@@ -90,6 +92,7 @@ Stretchy Nav style - common to:
 	overflow: hidden;
 	white-space: nowrap;
 	color: transparent;
+	text-color: black;
 	pointer-events: auto;
 
 	span, span::after, span::before {
@@ -168,7 +171,7 @@ Stretchy Nav style - common to:
 			height: 16px;
 			width: 16px;
 			right: 22px;
-			top: 50%;
+			top: -50%;
 			@include transform(translateY(-50%) scale(0));
 			opacity: .6;
 			background: image-url('cd-sprite-1.svg') no-repeat 0 0;
@@ -227,7 +230,7 @@ Stretchy Nav style - common to:
 	}
 
 	a.active {
-		color: $color-3;
+		color: #000000;
 
 		&::after {
 			opacity: 1;
@@ -621,6 +624,7 @@ main content basic style
 
 -------------------------------- */
 
+/*
 .cd-main-content {
 	position: relative;
 	z-index: 1;
@@ -628,6 +632,7 @@ main content basic style
 	padding: 100px 0;
 	background-color: $color-1;
 }
+*/
 
 /* -------------------------------- 
 
@@ -653,10 +658,4 @@ keyframes
     opacity: 1;
 	@include transform(translateX(0));
   }
-}
-
-#RightBottomLayerFixed {
-    position: fixed;
-    right: 0;
-    bottom: 0
 }
