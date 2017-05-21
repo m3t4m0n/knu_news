@@ -4,32 +4,32 @@ class PosterController < ApplicationController
       @every_post=Poster.all.order("id desc")
     end
     def create
-      
+     
     end
   
     def upload
     
       @user_id=Poster.new
+      @user_id.title=params[:title]
       @user_id.intro=params[:intro]
       @user_id.host=params[:host]
       @user_id.place=params[:place]
       @user_id.user_id=1
       @user_id.category=params[:category]
-      @user_id.image= params[:image].original_filename
-      File.open(Rails.root.join('app', 'models', 'poster'), 'wb') do |file|
-      file.write(@user_id.data)
-      File.open(Rails.root.join('app','models','poster', @user_id), 'wb') do |file|
-      File.write(@user_id.data)
+      @user_id.start_date=params[:start_date]
+      @user_id.end_date=params[:end_date]
+      @user_id.image= params[:image]
+     
       
       @user_id.save
       
       redirect_to '/poster/index'
-      end
     end
     
     def detail
        
         @poster = Poster.find(params[:id])
+       
       
         if(@poster.category == 0)
                 @category = "대외활동"
@@ -97,6 +97,22 @@ class PosterController < ApplicationController
          end
          return like_user
     end
+    
+    def reply
+        
+        @reply = Reply.new
+        @reply.user_id = params[:user_id]
+        @reply.content = params[:content]
+        @reply.poster_id = params[:post_id]
+        if @reply.save
+            if request.xhr?
+            render :json => {
+                                :user_email => User.find(params[:user_id]).email
+                                
+                            }
+            end
+        end
+    end
 end
 # 멋쟁이 사자처럼 0 
 # 동아리 1
@@ -106,4 +122,3 @@ end
 # 교외 행사 5
 # 기타 6
 #회원가입 시 email로 받는다. 
-end

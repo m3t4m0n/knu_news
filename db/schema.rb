@@ -12,15 +12,10 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20170519062449) do
-ActiveRecord::Schema.define(version: 20170519172537) do
-ActiveRecord::Schema.define(version: 20170519062449) do
 
   create_table "like_posts", force: :cascade do |t|
     t.integer  "user_id",    null: false
     t.integer  "poster_id",  null: false
-    t.integer  "user_id"
-    t.integer  "poster_id"
-    
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,9 +31,6 @@ ActiveRecord::Schema.define(version: 20170519062449) do
     t.datetime "end_date"
     t.integer  "like",       default: 0,                 null: false
     t.integer  "category",   default: 0
-    t.string   "filename"
-    t.binary   "filedata"
-    t.binary   "data",       default: "x'30'"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
   end
@@ -63,13 +55,6 @@ ActiveRecord::Schema.define(version: 20170519062449) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.integer  "grade"
-<<<<<<< HEAD
-=======
-    t.string   "name"
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "image"
->>>>>>> 691cf069cbb2c96ca55235aa81305e90c3b68ee2
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
