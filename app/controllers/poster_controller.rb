@@ -15,7 +15,7 @@ class PosterController < ApplicationController
       @user_id.host=params[:host]
       @user_id.place=params[:place]
       @user_id.user_id=1
-      @user_id.category=Poster.categoty
+      @user_id.category=params[:category]
       @user_id.start_date=params[:start_date]
       @user_id.end_date=params[:end_date]
       @user_id.image= params[:image]

@@ -14,14 +14,15 @@
 ActiveRecord::Schema.define(version: 20170519062449) do
 
   create_table "like_posts", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "poster_id"
+    t.integer  "user_id",    null: false
+    t.integer  "poster_id",  null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "posters", force: :cascade do |t|
     t.integer  "user_id",                                null: false
+    t.string   "title"
     t.string   "host",       default: "-",               null: false
     t.string   "place",      default: "-",               null: false
     t.text     "intro",      default: "-",               null: false
@@ -54,10 +55,6 @@ ActiveRecord::Schema.define(version: 20170519062449) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.integer  "grade"
-    t.string   "name"
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "image"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
