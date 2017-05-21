@@ -12,7 +12,8 @@
 //
 //= require jquery2
 //= require jquery_ujs
-//= require main
+//= require tab_main
+//= require myNav_main
 //= require modernizr
 //= require all
 //= require bootstrap.min
@@ -20,4 +21,3 @@
 //= require contact-reservations-form
 //= require imagesloaded.pkgd.min
 //= require_tree .
-
