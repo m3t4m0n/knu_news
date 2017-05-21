@@ -91,7 +91,7 @@ $(document).ready(function(){
         
       var post_id = $("#post_like").val();
       var like_p =  $("#like_p");
-      $(this).toggleClass('heart_off');
+      $(this).class('heart');
       $.ajax({
       method: "get",
       url: "/poster/like",

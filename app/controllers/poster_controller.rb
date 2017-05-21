@@ -71,7 +71,8 @@ class PosterController < ApplicationController
             puts "delete"
             like.destroy
         end
-        @count =  LikePost.where("poster_id = ?", params[:id]).length
+        #카운트가 플러스 일 해주는거 
+        @count =  LikePost.where("poster_id = ?", params[:post_id]).length
         puts @count
         if request.xhr?
             render :json => {
