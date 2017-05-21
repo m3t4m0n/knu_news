@@ -49,6 +49,7 @@ Stretchy Nav style - common to:
 
 -------------------------------- */
 
+
 .cd-stretchy-nav {
 	position: fixed;
 	z-index: 2;
@@ -260,7 +261,7 @@ Stretchy Nav style - common to:
 			@include transform(translateX(-5px));
 		}
 	}
-
+	
 	li:first-of-type a::after, 
 	li:first-of-type span {
 		@include animation-delay(.05s);
