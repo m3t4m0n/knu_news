@@ -1,9 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'carrierwave'
-gem'fog-aws'
-
-
 gem 'nokogiri'
 gem 'rest-client'
 
@@ -39,7 +35,7 @@ gem "font-awesome-rails"
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'rails_db'
-# gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.0'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

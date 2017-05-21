@@ -49,6 +49,7 @@ Stretchy Nav style - common to:
 
 -------------------------------- */
 
+
 .cd-stretchy-nav {
 	position: fixed;
 	z-index: 2;
@@ -92,7 +93,6 @@ Stretchy Nav style - common to:
 	overflow: hidden;
 	white-space: nowrap;
 	color: transparent;
-	text-color: black;
 	pointer-events: auto;
 
 	span, span::after, span::before {
@@ -171,7 +171,7 @@ Stretchy Nav style - common to:
 			height: 16px;
 			width: 16px;
 			right: 22px;
-			top: -50%;
+			top: 50%;
 			@include transform(translateY(-50%) scale(0));
 			opacity: .6;
 			background: image-url('cd-sprite-1.svg') no-repeat 0 0;
@@ -190,6 +190,10 @@ Stretchy Nav style - common to:
 		}
 	}
 
+	li {
+		@include transform(translateY(-100%));
+	}
+	
 	li:first-of-type a::after {
 		/* change custom icon using image sprites */
 		background-position: -32px 0;
@@ -243,6 +247,9 @@ Stretchy Nav style - common to:
 	}
 
 	span {
+		color: black;
+		font-weight: bold;
+		
 		opacity: 1;
 		@include transform(translateX(0));
 		@include animation(slideIn .15s backwards);
@@ -260,7 +267,7 @@ Stretchy Nav style - common to:
 			@include transform(translateX(-5px));
 		}
 	}
-
+	
 	li:first-of-type a::after, 
 	li:first-of-type span {
 		@include animation-delay(.05s);
