@@ -1,5 +1,5 @@
 class CreatePosters < ActiveRecord::Migration
- 
+
   def change
     create_table :posters do |t|
       t.integer :user_id, null: false
@@ -16,10 +16,9 @@ class CreatePosters < ActiveRecord::Migration
       t.integer :like, default: 0, null: false #좋아요 
       t.integer :category ,default: "-"#분류
       
-      t.string :filename
-      t.binary :filedata
-      t.timestamps
+      t.binary :data, default: 0
       
+     
       t.timestamps null: false
     end
   end
