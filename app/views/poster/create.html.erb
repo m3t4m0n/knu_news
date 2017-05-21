@@ -1,35 +1,39 @@
 <%= form_tag({action: :upload}, multipart: true) do %>
-<div class="home-section" style="text-align:center; height:700px;vertical-align: middle;">
-    <hr><br><br><br>
+<div class="home-section" style="text-align:center; height:1200px;vertical-align: middle;">
+    <hr>
+    <br>
+    <br>
+    <br>
     <h4>포스터를 작성해주세요</h4><br>
-      <label for="intro">정보를 입력해주세요</label><br>
-
-      <%= text_field_tag 'intro', nil ,placeholder: 'Enter intro', size:80, row:"5" %><br><br>
-      <%= text_field_tag 'host', nil ,placeholder: 'Enter host',size:80 %><br><br>
-      <%= text_field_tag 'place', nil ,placeholder: 'Enter place',size:80 %><br><br>
-      <%= text_field_tag 'title', nil ,placeholder: 'Enter title', size:80, row:"5" %><br><br>
-      <label for="intro">주최자를 선택해주세요 </label><br>
+      <label for="intro">정보를 입력해주세요</label><br><br><br>
+      <div style="width:430px; text-align:center; margin-left:550px">
+          <input type="title" name="title" id="title" class="input-md form-control" placeholder="title" maxlength="1000"><br><br>
+          <input type="content" name="intro" id="intro" class="input-md form-control" placeholder="intro" maxlength="1000"><br><br>
+          <input type="content" name="host" id="host" class="input-md form-control" placeholder="host" maxlength="100"><br><br>
+          <input type="content" name="place" id="place" class="input-md form-control" placeholder="place" maxlength="100"><br><br>
+          <input type="datetime" name="start_date" id="start_date" class="input-md form-control" placeholder="Enter start date ex)20170516" maxlength="100"><br><br>
+          <input type="datetime" name="end_date" id="end_date" class="input-md form-control" placeholder="Enter end date ex)20170516" maxlength="100"><br><br>
+      </div>
+      <label for="intro">카테고리를 선택해주세요 </label><br>
         <div class="row">
             <div class="col-sm-4 mb-40">
-            </div>
-            <div class="col-sm-4 mb-40">
-            <form method="post" action="#" id="form-1" role="form" class="form">
-                                    
                  <div class="mb-20 mb-md-10">
-                    <select class="input-md form-control">
-                        <option name="category">교내</option>
-                        <option name="category">교외</option>
-                        <option name="category">동아리</option>
+                    <select class="input-md form-control" id="category" name="category">
+                        <option value="0">멋쟁이 사자처럼</option>
+                        <option value="1">동아리</option>
+                        <option value="2">학과 행사</option>
+                        <option value="3">교내 행사</option>
+                        <option value="4">장학금</option>
+                        <option value="5">교외 행사</option>
+                        <option value="6">기타</option>
                     </select>
                 </div>
-            </form>
             </div>
-            </div>
-            <br>
-                                
+        </div> <br>
      <label for="intro">포스터를 업로드해주세요</label><br><br><br>                           
-     <div style="margin-left:650px;">
-      <%= file_field_tag 'image'%><br></div>
+      <div style="margin-left:650px;">
+      <%= file_field_tag 'image'%><br>
+      </div>
       <%= submit_tag %>
     <% end %>
 </div>
