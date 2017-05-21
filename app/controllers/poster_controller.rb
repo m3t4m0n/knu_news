@@ -4,18 +4,20 @@ class PosterController < ApplicationController
       @every_post=Poster.all.order("id desc")
     end
     def create
-      
+     
     end
   
     def upload
     
       @user_id=Poster.new
+      @user_id.title=params[:title]
       @user_id.intro=params[:intro]
       @user_id.host=params[:host]
       @user_id.place=params[:place]
       @user_id.user_id=1
-      @user_id.category=params[:category]
-
+      @user_id.category=Poster.categoty
+      @user_id.start_date=params[:start_date]
+      @user_id.end_date=params[:end_date]
       @user_id.image= params[:image]
      
 
@@ -28,6 +30,7 @@ class PosterController < ApplicationController
     def detail
        
         @poster = Poster.find(params[:id])
+       
       
         if(@poster.category == 0)
                 @category = "대외활동"

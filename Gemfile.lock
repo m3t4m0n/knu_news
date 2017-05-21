@@ -259,11 +259,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.6)
   bourbon
   byebug
-<<<<<<< HEAD
   carrierwave
-=======
-  carrierwave (~> 1.0)
->>>>>>> 269ceeeddfc4c07471eecab55f740ab94a74757d
   coffee-rails (~> 4.1.0)
   devise
   fog-aws
