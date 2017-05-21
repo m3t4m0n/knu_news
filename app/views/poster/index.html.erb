@@ -12,25 +12,13 @@
             
             <!-- Team item -->
             <% @every_post.each do |p|%>
+            <a href="/poster/<%=p.id%>/detail">
             <div class="col-sm-4 mb-xs-30 wow fadeInUp">
                 <div class="team-item">
                     <div class="team-item-image">
-                        
                         <%= image_tag("#{p.image}") %>
-                        
                         <div class="team-item-detail">
                             <h4 class="font-alt normal"><%=p.host%></h4>
-                            
-                            <p>
-                                <%= p.intro %> 
-                            </p>
-                            
-                            <div class="team-social-links">
-                                <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                                <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-                                <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
-                            </div>
-                            
                         </div>
                     </div>
                     
@@ -48,6 +36,7 @@
                     
                 </div>
             </div>
+            </a>
             <!-- End Team item -->
             <% end%>
             

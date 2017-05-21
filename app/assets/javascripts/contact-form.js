@@ -65,4 +65,44 @@ $(document).ready(function(){
         $("#result").slideUp();
     });
     
+    
+    //soomin add
+    
+    $( ".heart" ).click(function() {
+     //나중에 수정하기. 
+      var like_p =  $("#like_p");
+      var post_id = $("#post_like").val();
+      
+      $(this).toggleClass('heart_off');
+
+      $.ajax({
+      method: "POST",
+      url: "/poster/like",
+      data: { post_id: post_id },
+      error : function(error) {alert("Error!"+error);},
+      success : function(data, textStatus, xhr) {
+          like_p.text(data.count)
+      },
+      complete : function() {}
+      });
+    });
+    
+    $( ".heart_off" ).click(function() {
+        
+      var post_id = $("#post_like").val();
+      var like_p =  $("#like_p");
+      $(this).toggleClass('heart_off');
+      $.ajax({
+      method: "get",
+      url: "/poster/like",
+      data: { post_id: post_id },
+      error : function(error) {alert("Error!"+error.error.message);},
+      success : function(data) {
+          like_p.text(data.count)
+      },
+      complete : function() {}
+      });
+    });
+
+
 });

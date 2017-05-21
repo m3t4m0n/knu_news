@@ -3,7 +3,7 @@ class CreatePosters < ActiveRecord::Migration
   def change
     create_table :posters do |t|
       t.integer :user_id, null: false
-     
+      t.string :title
       t.string :host, null: false, default: "-" #주최하는곳 
       t.string :place, null: false, default: "-" #개최 장소 
       
