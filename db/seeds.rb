@@ -164,7 +164,7 @@ Poster.create(
         host: "한국 IT 경영학회",
         place: "Naver D.camp",
         intro: "안녕하세요. 안녕하세요.한국대학생 IT경영학회에서 강연회를 진행합니다.",
-        data: "poster/poster-2.png",
+        image: "poster/poster-2.png",
         start_date: "2017/05/20",
         end_date: "2017/05/20",
         category: 5

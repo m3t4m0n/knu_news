@@ -17,7 +17,13 @@
                 <div class="team-item">
                     <div class="team-item-image">
 
-                        <%= image_tag("#{p.image}") %>
+
+                        
+                        <div class="card post" data-post-id="<%= p.id %>"> 
+                        <div class="card-image"> 
+                        <% if p.image.url %> 
+                        <img src="<%= p.image.url %>" /> 
+                        <% end %> </div>
 
                         <div class="team-item-detail">
                             <h4 class="font-alt normal"><%=p.host%></h4>

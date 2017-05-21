@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-
+gem 'carrierwave'
+gem'fog-aws'
 gem 'omniauth-facebook'
 gem 'devise'
 gem 'modernizr-rails'
