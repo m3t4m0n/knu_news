@@ -21,4 +21,3 @@
 //= require contact-reservations-form
 //= require imagesloaded.pkgd.min
 //= require_tree .
-

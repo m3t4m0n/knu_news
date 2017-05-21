@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   get 'poster/index'
   post 'poster/upload'
   get 'poster/create'
+  get 'poster/:id/detail' => 'poster#detail'
+  get 'poster/like'
+  post 'poster/like'
+  get 'common/soomin_test'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

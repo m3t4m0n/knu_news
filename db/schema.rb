@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(version: 20170519172537) do
 ActiveRecord::Schema.define(version: 20170519062449) do
 
   create_table "like_posts", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.integer  "poster_id",  null: false
     t.integer  "user_id"
     t.integer  "poster_id"
     
@@ -25,6 +27,7 @@ ActiveRecord::Schema.define(version: 20170519062449) do
 
   create_table "posters", force: :cascade do |t|
     t.integer  "user_id",                                null: false
+    t.string   "title"
     t.string   "host",       default: "-",               null: false
     t.string   "place",      default: "-",               null: false
     t.text     "intro",      default: "-",               null: false
@@ -33,6 +36,8 @@ ActiveRecord::Schema.define(version: 20170519062449) do
     t.datetime "end_date"
     t.integer  "like",       default: 0,                 null: false
     t.integer  "category",   default: 0
+    t.string   "filename"
+    t.binary   "filedata"
     t.binary   "data",       default: "x'30'"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false

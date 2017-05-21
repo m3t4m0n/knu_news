@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'nokogiri'
+gem 'rest-client'
+
 gem 'omniauth-facebook'
 gem 'devise'
 gem 'modernizr-rails'

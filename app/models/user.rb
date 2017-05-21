@@ -9,4 +9,5 @@ class User < ActiveRecord::Base
 
   has_many :posters, through: :like_posts
   has_many :like_posts
+  
 end
