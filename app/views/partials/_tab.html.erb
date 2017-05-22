@@ -14,18 +14,21 @@
 
 		<section class="cd-gallery">
 			<ul>
-				<li class="mix color-1 check1 radio2 option3"><%= image_tag "img-1.jpg" %></li>
-				<li class="mix color-2 check2 radio2 option2"><%= image_tag "img-2.jpg" %></li>
-				<li class="mix color-1 check3 radio3 option1"><%= image_tag "img-3.jpg" %></li>
-				<li class="mix color-1 check3 radio2 option4"><%= image_tag "img-4.jpg" %></li>
-				<li class="mix color-1 check1 radio3 option2"><%= image_tag "img-5.jpg" %></li>
-				<li class="mix color-2 check2 radio3 option3"><%= image_tag "img-6.jpg" %></li>
-				<li class="mix color-2 check2 radio2 option1"><%= image_tag "img-7.jpg" %></li>
-				<li class="mix color-1 check1 radio3 option4"><%= image_tag "img-8.jpg" %></li>
-				<li class="mix color-2 check1 radio2 option3"><%= image_tag "img-9.jpg" %></li>
-				<li class="mix color-1 check3 radio2 option4"><%= image_tag "img-10.jpg" %></li>
-				<li class="mix color-1 check3 radio3 option2"><%= image_tag "img-11.jpg" %></li>
-				<li class="mix color-2 check1 radio3 option1"><%= image_tag "img-12.jpg" %></li>
+				<% @every_post.each do |p| %>
+				<li><%= image_tag p.image %></li>
+				<% end %>
+				<li class="mix color-1 option3"><%= image_tag "img-1.jpg" %></li>
+				<li class="mix color-2 option2"><%= image_tag "img-2.jpg" %></li>
+				<li class="mix color-1 option1"><%= image_tag "img-3.jpg" %></li>
+				<li class="mix color-1 option4"><%= image_tag "img-4.jpg" %></li>
+				<li class="mix color-1 option2"><%= image_tag "img-5.jpg" %></li>
+				<li class="mix color-2 option3"><%= image_tag "img-6.jpg" %></li>
+				<li class="mix color-2 option1"><%= image_tag "img-7.jpg" %></li>
+				<li class="mix color-1 option4"><%= image_tag "img-8.jpg" %></li>
+				<li class="mix color-2 option3"><%= image_tag "img-9.jpg" %></li>
+				<li class="mix color-1 option4"><%= image_tag "img-10.jpg" %></li>
+				<li class="mix color-1 option2"><%= image_tag "img-11.jpg" %></li>
+				<li class="mix color-2 option1"><%= image_tag "img-12.jpg" %></li>
 				<li class="gap"></li>
 				<li class="gap"></li>
 				<li class="gap"></li>
@@ -44,27 +47,6 @@
 				</div> <!-- cd-filter-block -->
 
 				<div class="cd-filter-block">
-					<h4>Check boxes</h4>
-
-					<ul class="cd-filter-content cd-filters list">
-						<li>
-							<input class="filter" data-filter=".check1" type="checkbox" id="checkbox1">
-			    			<label class="checkbox-label" for="checkbox1">Option 1</label>
-						</li>
-
-						<li>
-							<input class="filter" data-filter=".check2" type="checkbox" id="checkbox2">
-							<label class="checkbox-label" for="checkbox2">Option 2</label>
-						</li>
-
-						<li>
-							<input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
-							<label class="checkbox-label" for="checkbox3">Option 3</label>
-						</li>
-					</ul> <!-- cd-filter-content -->
-				</div> <!-- cd-filter-block -->
-
-				<div class="cd-filter-block">
 					<h4>Select</h4>
 
 					<div class="cd-filter-content">
@@ -80,26 +62,6 @@
 					</div> <!-- cd-filter-content -->
 				</div> <!-- cd-filter-block -->
 
-				<div class="cd-filter-block">
-					<h4>Radio buttons</h4>
-
-					<ul class="cd-filter-content cd-filters list">
-						<li>
-							<input class="filter" data-filter="" type="radio" name="radioButton" id="radio1" checked>
-							<label class="radio-label" for="radio1">All</label>
-						</li>
-
-						<li>
-							<input class="filter" data-filter=".radio2" type="radio" name="radioButton" id="radio2">
-							<label class="radio-label" for="radio2">Choice 2</label>
-						</li>
-
-						<li>
-							<input class="filter" data-filter=".radio3" type="radio" name="radioButton" id="radio3">
-							<label class="radio-label" for="radio3">Choice 3</label>
-						</li>
-					</ul> <!-- cd-filter-content -->
-				</div> <!-- cd-filter-block -->
 			</form>
 
 			<a href="#0" class="cd-close">Close</a>

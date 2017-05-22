@@ -55,6 +55,15 @@ Main Components
 
 -------------------------------- */
 
+li {
+	list-style: none;
+}
+
+.poster {
+	width: 336.36px;
+	height: 381.2px;
+}
+
 .cd-header {
 	position: relative;
 	height: 150px;
@@ -288,6 +297,7 @@ xtab-filter
 xgallery
 
 -------------------------------- */
+
 
 .cd-gallery {
 	padding: 26px 5%;

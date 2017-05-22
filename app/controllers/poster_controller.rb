@@ -1,7 +1,7 @@
 class PosterController < ApplicationController
 
     def index
-      @every_post=Poster.all.order("id desc")
+      @every_post=Poster.order("posters.like desc").all
     end
     def create
      
