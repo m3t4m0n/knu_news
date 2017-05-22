@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'nokogiri'
 gem 'rest-client'
-
 gem 'omniauth-facebook'
 gem 'devise'
 gem 'modernizr-rails'
@@ -33,7 +32,6 @@ gem 'bourbon'
 gem "font-awesome-rails"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
 gem 'rails_db'
 gem 'carrierwave', '~> 1.0'
 # Use Unicorn as the app server

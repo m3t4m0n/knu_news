@@ -132,11 +132,11 @@ $(document).ready(function(){
                 $("#reply_area").append('<p>'+content+'</p>').trigger("create");
             $("#reply_area").append('</div>');
          $("#reply_area").append('</li>');
+         $("#reply_content").empty();
              
       },
       complete : function() {}
       });
     });
-
-
+    
 });
