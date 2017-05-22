@@ -114,6 +114,10 @@ class PosterController < ApplicationController
             end
         end
     end
+    
+    def best
+        
+    end
 end
 # 멋쟁이 사자처럼 0 
 # 동아리 1

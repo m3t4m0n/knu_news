@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post 'poster/like'
   post 'poster/reply'
   get 'common/soomin_test'
+  get 'poster/best' => 'poster#best'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
